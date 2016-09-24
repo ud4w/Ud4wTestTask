@@ -1,21 +1,21 @@
-// [
-//     {
-//         "model": "udaw_test.person",
-//         "pk": 1,
-//         "fields": {
-//             "name": "Anthony",
-//             "surname": "Shumilov",
-//             "date_of_birth": "26.10.1985"
-//         }
-//     },
-//     { "model": "auth.user",
-//         "pk": 1,
-//         "fields": {
-//             "username": "admin",
-//             "password": "admin"
-//             "is_superuser": true,
-//             "is_staff": true,
-//             "is_active": true
-//         }
-//     }
-// ]
+[
+    {
+        "model": "udaw_test.person",
+        "pk": 1,
+        "fields": {
+            "name": "Anthony",
+            "surname": "Shumilov",
+            "date_of_birth": "26.10.1985"
+        }
+    },
+    { "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "username": "admin",
+            "password": "pbkdf2_sha256$12000$FLOJiOA6euW6$KexJglkm4u1uPus/6JBk81mqmo7U9Pyxst2ynz4/J5M="
+            "is_superuser": true,
+            "is_staff": true,
+            "is_active": true
+        }
+    }
+]
