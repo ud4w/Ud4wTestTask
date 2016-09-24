@@ -1,6 +1,6 @@
 """Simple test."""
 from django.test import TestCase, Client
-from django.urls import reverse
+from django.urls.urlresolvers import reverse
 
 # Create your tests here.
 
