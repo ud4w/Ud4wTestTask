@@ -1,18 +1,23 @@
 [
     {
-        "model": "udaw_test.person",
+        "model": "udaw_test.Person",
         "pk": 1,
         "fields": {
             "name": "Anthony",
             "surname": "Shumilov",
-            "date_of_birth": "26.10.1985"
+            "date_of_birth": "1985-10-26",
+            "bio": "Anthony from Kiev, was working in aviation for ~10 years recently decide to became a programmer and after passing programming trainings (approx. 2 years long) which are tyghty related with self-improvement via practice on solving different kinds of most common programming problems. I've recently started my way as programmer, and i do clearly understand that my experiance in the real projects is prety poor, but i hope to have a possibility to earn it in any way.",
+            "email": "udaw@mail.ua",
+            "jabber_id": "udaw@42cc.co",
+            "skype_id": "antony1985_",
+            "other_contacts": "+380972164501"
         }
     },
     { "model": "auth.user",
         "pk": 1,
         "fields": {
             "username": "admin",
-            "password": "pbkdf2_sha256$12000$FLOJiOA6euW6$KexJglkm4u1uPus/6JBk81mqmo7U9Pyxst2ynz4/J5M="
+            "password": "pbkdf2_sha256$12000$FLOJiOA6euW6$KexJglkm4u1uPus/6JBk81mqmo7U9Pyxst2ynz4/J5M=",
             "is_superuser": true,
             "is_staff": true,
             "is_active": true

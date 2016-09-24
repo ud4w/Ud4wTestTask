@@ -5,7 +5,7 @@ import datetime
 # Create your models here.
 
 
-class Preson(models.Model):
+class Person(models.Model):
     """Person model for first ticket."""
 
     name = models.CharField(max_length=60, blank=True)
