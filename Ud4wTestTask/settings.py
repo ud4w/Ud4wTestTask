@@ -49,6 +49,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'udaw_test.middleware.collect_requests.RequestCollectorMiddleware',
 )
 
 ROOT_URLCONF = 'Ud4wTestTask.urls'
