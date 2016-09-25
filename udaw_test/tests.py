@@ -2,6 +2,7 @@
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
 from models import Person
+import datetime
 
 # Create your tests here.
 
@@ -25,10 +26,10 @@ class PersonTest(TestCase):
     """Simple maodel test."""
 
     def setUp(self):
-        """Setting person to test."""
-        self.person = Person.objects.filter(pk=1)
+        """Setting person for testing purpose."""
+        self.def_person = Person.objects.create()
 
     def test_person_name(self):
-        """Testting that name first letter should be uppercase."""
-        self.assertEqual(
-            self.person.__unicode__(), self.person.__unicode__().title())
+        """Rich test for default person birth date is not in the future"""
+        self.assertIs(
+            self.def_person.date_of_birth <= datetime.datetime.now().date(), True)

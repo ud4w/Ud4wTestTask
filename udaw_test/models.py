@@ -16,3 +16,7 @@ class Person(models.Model):
     jabber_id = models.CharField(max_length=60, blank=True)
     skype_id = models.CharField(max_length=60, blank=True)
     other_contacts = models.TextField(blank=True)
+
+    def __unicode__(self):
+        """For python2."""
+        return self.name
