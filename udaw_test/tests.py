@@ -30,6 +30,7 @@ class PersonTest(TestCase):
         self.def_person = Person.objects.create()
 
     def test_person_name(self):
-        """Rich test for default person birth date is not in the future"""
+        """Rich test for default person birth date is not in the future."""
         self.assertIs(
-            self.def_person.date_of_birth <= datetime.datetime.now().date(), True)
+            self.def_person.date_of_birth <= datetime.datetime.now().date(),
+            True)
