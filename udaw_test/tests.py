@@ -26,7 +26,7 @@ class PersonTest(TestCase):
 
     def setUp(self):
         """Setting person to test."""
-        self.person = Person.objects.get(pk=1)
+        self.person = Person.objects.filter(pk=1)
 
     def test_person_name(self):
         """Testting that name first letter should be uppercase."""
