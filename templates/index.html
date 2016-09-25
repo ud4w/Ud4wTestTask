@@ -4,20 +4,20 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h2>42 Coffee Cups Test Assignment</h2>
+        <h2>42 Coffee Cups Test Assignment</h2>
         </div>
         <div class="col-md-6">
-            <p class="lead">Anthony</p>
-            <p class="lead">Shumilov</p>
-            <p class="lead">1985-10-26</p>
-            <p class="lead">Bio:<br>Anthony from Kiev, was working in aviation for ~10 years recently decide to became a programmer and after passing programming trainings (approx. 2 years long) which are tyghty related with self-improvement via practice on solving different kinds of most common programming problems. I've recently started my way as programmer, and i do clearly understand that my experiance in the real projects is prety poor, but i hope to have a possibility to earn it in any way.</p>
+            <p class="lead">{{person.name}}</p>
+            <p class="lead">{{person.surname}}</p>
+            <p class="lead">{{person.date_of_birth}}</p>
+            <p class="lead">Bio:<br>{{person.bio}}</p>
         </div>
         <div class="col-md-6">
             <p class="lead">Contacts</p>
-            <p class="lead">Email: udaw@mail.ua</p>
-            <p class="lead">Jabber: udaw@42cc.co</p>
-            <p class="lead">Skype: antony1985_</p>
-            <p class="lead">Other Contacts:<br>+380972164501</p>
+            <p class="lead">Email: {{person.email}}</p>
+            <p class="lead">Jabber: {{person.jabber_id}}</p>
+            <p class="lead">Skype: {{person.skype_id}}</p>
+            <p class="lead">Other Contacts:<br>{{person.other_contacts}}</p>
         </div>
     </div>
 </div>
