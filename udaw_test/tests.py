@@ -16,7 +16,7 @@ class PageTest(TestCase):
 
     def test_index_page(self):
         """Check that responce is 200 ok, template used."""
-        url = reverse('index')
+        url = reverse('udaw_test:index')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
