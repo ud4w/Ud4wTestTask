@@ -17,6 +17,7 @@ class PageTest(TestCase):
     def test_index_page(self):
         """Check that responce is 200 ok, template used."""
         url = reverse('udaw_test:index')
+
         try:
             response = self.client.get(url)
         except ObjectDoesNotExist:
