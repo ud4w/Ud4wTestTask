@@ -19,6 +19,10 @@
             <p class="lead">Skype: {{person.skype_id}}</p>
             <p class="lead">Other Contacts:<br>{{person.other_contacts}}</p>
         </div>
+        <hr>
+        <div class="col-md-12">
+            <a href="{% url "udaw_test:requests" %}">requests</a>
+        </div>
     </div>
 </div>
 {% endblock content %}
