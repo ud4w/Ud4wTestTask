@@ -13,3 +13,8 @@ def index(request):
     except ObjectDoesNotExist:
         person = None
     return render(request, 'index.html', {'person': person})
+
+
+def requests(request):
+    """Request view."""
+    return render(request, 'requests.html')
