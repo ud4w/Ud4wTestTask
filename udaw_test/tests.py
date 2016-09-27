@@ -1,8 +1,8 @@
 """Simple test."""
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
+from django.core.exceptions import ObjectDoesNotExist
 from models import Person
-import datetime
 
 # Create your tests here.
 
@@ -16,8 +16,12 @@ class PageTest(TestCase):
 
     def test_index_page(self):
         """Check that responce is 200 ok, template used."""
-        url = reverse('index')
-        response = self.client.get(url)
+        url = reverse('udaw_test:index')
+        try:
+            response = self.client.get(url)
+        except ObjectDoesNotExist:
+            self.fail("client.get(url) raised ObjectDoesNotExist unexpectedly")
+
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
@@ -30,7 +34,5 @@ class PersonTest(TestCase):
         self.def_person = Person.objects.create()
 
     def test_person_name(self):
-        """Rich test for default person birth date is not in the future."""
-        self.assertIs(
-            self.def_person.date_of_birth <= datetime.datetime.now().date(),
-            True)
+        """Rich test for default person."""
+        self.assertEqual(self.def_person.__unicode__(), self.def_person.name)
