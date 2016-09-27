@@ -16,10 +16,13 @@
 
         <link rel="stylesheet" href="{% static 'css/screen.css' %}" media="screen, projection"/>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         {% block extra_head %}{% endblock extra_head %}
 
     </head>
     <body id="{% block body_id %}{% endblock %}" class="{% block body_class %}{% endblock %}">
         {% block content %}{% endblock content %}
+        <script src="{% static 'js/requests.js' %}"></script>
     </body>
 </html>
