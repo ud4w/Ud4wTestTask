@@ -5,6 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    url(r'^index/', include('udaw_test.urls')),
+    url(r'^', include('udaw_test.urls', namespace="udaw_test")),
     url(r'^admin/', include(admin.site.urls)),
 )
