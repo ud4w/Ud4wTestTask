@@ -92,6 +92,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'uploads')
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/uploads/'
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -105,11 +106,14 @@ MEDIA_URL = '/uploads/'
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+
 STATIC_URL = '/static/'
+
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
 
 # Turn off south during test
 SOUTH_TESTS_MIGRATE = False
@@ -121,4 +125,3 @@ STATICFILES_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, 'assets'),
 )
-
