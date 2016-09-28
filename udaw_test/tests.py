@@ -1,7 +1,6 @@
 """Simple test."""
 from django.test import TestCase, Client
 from django.core.urlresolvers import reverse
-from django.core.exceptions import ObjectDoesNotExist
 from models import Person
 
 # Create your tests here.
@@ -17,11 +16,7 @@ class PageTest(TestCase):
     def test_index_page(self):
         """Check that responce is 200 ok, template used."""
         url = reverse('udaw_test:index')
-        try:
-            response = self.client.get(url)
-        except ObjectDoesNotExist:
-            self.fail("client.get(url) raised ObjectDoesNotExist unexpectedly")
-
+        response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 

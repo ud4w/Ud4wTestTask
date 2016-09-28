@@ -9,7 +9,7 @@ from models import Person
 def index(request):
     """Person view."""
     try:
-        person = Person.objects.get(pk=1)
+        person = Person.objects.get()
     except ObjectDoesNotExist:
         person = None
     return render(request, 'index.html', {'person': person})
