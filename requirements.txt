@@ -1,5 +1,5 @@
 42cc-pystyle==0.0.16
-Django==1.6.7
+Django==1.11.29
 South==1.0.2
 argparse==1.2.1
 django-bootstrap3==7.1.0
